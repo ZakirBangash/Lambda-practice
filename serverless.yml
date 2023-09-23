@@ -1,0 +1,28 @@
+org: zakirbangash
+app: lambda-learning
+service: lamb-quart-g
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
+  request:
+    handler: request.handler
+    events:
+      - httpApi:
+          path: /request
+          method: get
+  createRequest:
+    handler: createRequest.handler
+    events:
+      - httpApi:
+          path: /createRequest
+          method: post
