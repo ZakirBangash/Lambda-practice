@@ -26,3 +26,6 @@ functions:
       - httpApi:
           path: /createRequest
           method: post
+
+plugins:
+  - serverless-offline
